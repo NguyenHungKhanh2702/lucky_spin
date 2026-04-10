@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng Quay May Mắn</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="main-title" title="Nhấp đúp để mở cài đặt tỷ lệ">VÒNG QUAY MAY MẮN</h1>
+
+    <div class="wheel-container">
+        <div class="pointer"></div>
+        <canvas id="wheel" width="600" height="600"></canvas>
+    </div>
+
+    <button id="spin-btn">QUAY NGAY</button>
+
+    <div id="result-popup">
+        <div class="popup-content">
+            <h2>Chúc mừng!</h2>
+            <p id="result-text"></p>
+            <button class="close-btn" onclick="closePopup()">Đóng</button>
+        </div>
+    </div>
+
+    <div id="admin-panel">
+        <h3 id="admin-header" title="Nhấn giữ để kéo đi nơi khác">Công cụ chỉnh sửa tỷ lệ (Admin) ✥</h3>
+        <p class="admin-note">Tỷ lệ (Trọng số) càng cao, khả năng quay trúng càng lớn.</p>
+        
+        <div id="admin-settings">
+            </div>
+        
+        <button id="add-btn" onclick="addSegment()">+ Thêm ô mới</button>
+        <button id="save-btn" onclick="saveSettings()">Lưu & Đóng</button>
+    </div>
+
+    <div id="toast-msg">Đã cập nhật vòng quay!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
